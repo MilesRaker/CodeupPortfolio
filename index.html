@@ -54,8 +54,30 @@
 
 <main>
   <div id="KSAContainer"></div>
-  <div id="contactContainer"></div>
-  <div id="constructionSidebar"></div>
+
+  <button id="contactBtn" class="btn btn-primary shadow stickyButton" type="button" data-bs-toggle="collapse" data-bs-target="#contactCard" aria-expanded="false" aria-controls="contactCard">
+    Contact Card
+  </button>
+  <div id="contactCard" class="card shadow collapse sideCard">
+    <div class="card-body">
+      <button type="button" class="btn-close" aria-label="Close" data-bs-toggle="collapse" data-bs-target="#contactCard" aria-expanded="false" aria-controls="contactCard"></button>
+      <h3 class="card-title">Contact</h3>
+      <p class="card-text">Phone: 360.606.8381</p>
+      <p class="card-text">Email: MilesRaker@gmail.com</p>
+      <p class="card-text">LinkedIn: www.LinkedIn.com/in/MilesRaker/</p>
+      <p class="card-text">React Portfolio: www.MilesRaker.com</p>
+    </div>
+  </div>
+
+  <button id="metaBtn" class="btn btn-primary shadow stickyButton" type="button" data-bs-toggle="collapse" data-bs-target="#metaCard" aria-expanded="false" aria-controls="contactContainer">
+    Build Notes
+  </button>
+  <div id="metaCard" class="card shadow collapse sideCard">
+    <button type="button" class="btn-close" aria-label="Close" data-bs-toggle="collapse" data-bs-target="#metaCard" aria-expanded="false" aria-controls="metaCard"></button>
+    <h3>Sticky Buttons</h3>
+    <p>used Bootstrap "collapse" class</p>
+  </div>
+
 </main>
 <footer>
 
