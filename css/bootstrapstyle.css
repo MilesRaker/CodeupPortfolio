@@ -1,0 +1,288 @@
+/* Stylesheet for Bootstrap Grid System Paired Programming
+
+This styling is responsive, with three media query sections near the end of this file*/
+
+*{
+    --color-gray: #E6E6E6;
+    --color-red: #E6563B;
+    --color-blazin-orange: #EB9D3A;
+    --color-kermit-green: #7CB06C;
+    --color-little-mermaid-blue: #00ABA9;
+    --color-boring-white: #F0F0F0;
+    --color-darkest-gray-ever: #C27F390;
+    --color-title-gray: #393D40
+}
+
+.sidebar-row{
+    margin-bottom: 4em;
+}
+
+.navbar-brand {
+    margin-right: 3em;
+}
+
+.sidebar-img{
+    width: 75px;
+    height: 75px;
+    max-height: 100px;
+    border: 2px var(--color-darkest-gray-ever) solid;
+    display: inline;
+    padding: 0;
+    margin: 0 1em 0 0;
+    object-fit: cover;
+}
+
+.ABEL {
+    font-family: "ABEL";
+}
+
+.ANTON {
+    font-family: "ANTON";
+}
+
+body {
+    background-color: var(--color-boring-white);
+}
+
+.nav-icon{
+    height: 105px;
+    width: 105px;
+}
+
+#hamburger-btn{
+    padding: .1em;
+    border: var(--color-gray) solid 2px;
+    height: 50px;
+    width: 75px;
+}
+
+#title {
+    display: none;
+    color: black;
+    font-weight: bold;
+    align-self: center;
+    margin-left: 20px;
+
+}
+
+.nav-link{
+    padding-top: 22px;
+    color: var(--color-darkest-gray-ever);
+}
+
+.button {
+    color: white;
+    border-radius: 50%;
+    min-height: 100px;
+    min-width: 100px;
+    border: white solid 10px;
+    font-weight: bolder;
+    margin: 1em;
+}
+
+.flex{
+    display: flex;
+}
+
+#DESIGN {
+    background-color: var(--color-red);
+}
+
+#DEVELOP {
+    background-color: var(--color-blazin-orange);
+}
+
+#SUPPORT {
+    background-color: var(--color-kermit-green);
+}
+
+#HOST {
+    background-color: var(--color-little-mermaid-blue);
+}
+
+.header-stuff{
+    margin: 1em;
+}
+
+.featured-image {
+    width: 100%;
+}
+
+.feature-description{
+    display: inline;
+    margin: 0;
+    padding: 10px 18px;
+    font-size: 1.2em;
+}
+
+.description-container{
+    display: flex;
+}
+
+.feature-btn {
+    color: black;
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+    font-weight: bolder;
+    padding: 0;
+    justify-self: flex-end;
+    font-size: .75em;
+    margin-left: 6px;
+}
+
+.develop-btn{
+    background-color: var(--color-red);
+}
+
+.design-btn{
+    background-color: var(--color-blazin-orange);
+}
+
+.support-btn{
+    background-color: var(--color-kermit-green);
+}
+
+.host-btn{
+    background-color: var(--color-little-mermaid-blue);
+}
+
+.feature-row {
+    margin-bottom: .5em;
+}
+
+.smol-button{
+    justify-content: flex-end;
+    /*justify-content: space-between;*/
+}
+
+.sidebar {
+    display: none;
+    width: 25%;
+    margin-left: 50px;
+}
+
+#first-hr{
+    display:none;
+}
+
+.desc {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    font-size: x-large;
+}
+
+.tweet-container {
+    position: relative;
+    right: 12px;
+    top: 2em;
+}
+
+#page-heading{
+    font-size: 2.5em;
+    margin: 36px 16px;
+}
+
+#selected-work-heading {
+    margin: 2em 0 3em 0;
+    font-size: 1em;
+    color: black;
+}
+
+#bottom-hr {
+    background-color: black;
+    height: 1px;
+    border: none;
+    opacity: 1;
+}
+
+@media (min-width: 768px){
+
+    #first-hr{
+        display:block;
+    }
+
+    #button-group-1{
+        display: inline;
+    }
+    #button-group-2{
+        display: inline;
+    }
+
+    #page-heading{
+        font-size: 4em;
+    }
+
+    #page-sub-heading{
+        font-size: 2.5em;
+    }
+
+    #button-group{
+        margin-bottom: 2.5em;
+    }
+
+    #selected-work-heading {
+        margin: 3em 0 3em 0;
+        font-size: 1.3em;
+        color: black;
+    }
+
+    .feature-card{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex: 1;
+        margin: .5em 1em;
+    }
+
+    .feature-card-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    #bottom-hr {
+        display: none;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        padding: 0 12px;
+    }
+
+    #selected-work-heading{
+        margin: 1.5em 0 4.5em 0;
+    }
+
+    .big-container{
+        display: flex;
+    }
+
+    #the-last-header {
+        margin: 2em 0 2em 0;
+        font-size: 1.1em;
+        color: #6f7174;
+    }
+
+    #last-tweet {
+        font-size: 1.1em;
+        color: #6f7174;
+    }
+
+    #title{
+        display: inline;
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 1440px) {
+    #the-last-header {
+        margin: 2em 0 6em 0;
+    }
+}
