@@ -4,26 +4,26 @@
 // Eventually migrate to MySQL database, when course gets to MySQL material
 
 let projects = [
-    {id: 0, name: "Welcome.html", KSAs: [{name:"html", type:"language"}], description : "Recreate a webpage in html from an image", url:"html/welcome.html"},
+    {id: 0, name: "Welcome.html", KSAs: [{name:"html", type:"language"}, {name:"css", type:"language"}], description : "Recreate a webpage in html from an image, add external css", url:"html/welcome.html"},
     {id: 1, name: "Github.html", KSAs: [{name:"html", type:"language"}], description : "Recreate Github's teams page layout in a file named github.html", url:"html/github.html"},
     {id: 2, name: "Forms.html", KSAs: [{name:"html", type:"language"}, {name: "forms", type: "skill"}], description : "Create html form according to specs provided by CodeUp", url:"html/forms.html"},
+    {id: 3, name: "CSS Selectors", KSAs: [{name: "css", type: "language"}], description : "Use external css to style a provided html", url:"html/css_selectors.html"},
+    {id: 4, name: "Login Form", KSAs: [{name: "css", type: "language"}, {name: "forms", type: "skill"}], description : "Use external css to style a provided login form html", url:"html/login-form.html"},
+    {id: 5, name: "Twitter Clone", KSAs: [{name: "css", type: "language"}], description : "Use external css to style a provided twitter html", url:"html/twitter.html"},
+    {id: 6, name: "Flexbox Fundamentals", KSAs: [{name: "css", type: "language"}, {name: "flexbox", type:"skill"}], description : "edit existing CSS to match a wireframe for a card component", url:"html/flexbox-fundamentals-exercise.html"},
+    {id: 7, name: "Flexbox Form Practice", KSAs: [{name:"html", type:"language"}, {name: "forms", type: "skill"}, {name: "css", type: "language"}, {name: "flexbox", type:"skill"}], description : "Create a centered form using flex box from wireframe", url:"html/flex-form.html"},
+    {id: 8, name: "Flexbox Cards", KSAs: [{name: "css", type: "language"}, {name: "flexbox", type:"skill"}], description : "Read through comments at the end of css file and add the appropriate flex properties to it.", url:"html/flexbox-cards.html"},
+    {id: 9, name: "Flexbox Navbar", KSAs: [{name:"html", type:"language"}, {name:"google-fonts", type:"api"}, {name:"font-awesome", type:"api"}, {name: "css", type: "language"}, {name: "flexbox", type:"skill"}], description : "Create NavBar and Footer from provided wireframe.", url:"html/flexbox-nav-exercise.html"},
+    {id: 10, name: "Media Queries", KSAs: [{name:"responsive", type:"skill"}, {name:"font-awesome", type:"api"}, {name: "css", type: "language"}, {name: "flexbox", type:"skill"}], description : "Use media Queries to make a basic webpage responsive.", url:"html/media-queries.html"},
+    {id: 11, name: "Pizza Order", KSAs: [{name:"responsive", type:"skill"}, {name:"font-awesome", type:"api"}, {name: "bootstrap", type: "api"}], description : "Design a Pizza Ordering webpage using bootstrap.", url:"html/order-pizza.html"},
+    {id: 12, name: "T-Block Resume", KSAs: [{name:"responsive", type:"skill"}, {name: "bootstrap", type: "api"}, {name: "css", type: "language"}], description : "Design a resume according to a given wireframe using bootstrap.", url:"html/T-Resume.html"},
+    {id: 13, name: "Paired Programming 1", KSAs: [{name:"html", type:"language"}, {name:"paired-programming", type:"skill"}, {name:"responsive", type:"skill"}, {name: "bootstrap", type: "api"}, {name: "css", type: "language"}, ], description : "Create a responsive website for the fictional company Codeup Design through paired programming. My partner was Josef Fussel", url:"html/codeupDesign.html"},
 
 ]
-let sortedProjects = [];
 // desiredKSAs are chosen by the user, then used to sort projects displayed
 let desiredKSAs = [];
+let sortedProjects = [];
 
-/*let KSAs = [
-    {id: 1, name: "html", type:"language"},
-    {id: 2, name: "css", type:"language"},
-    {id: 3, name: "JavaScript", type:"language"},
-    {id: 4, name: "Java", type:"language"},
-    {id: 5, name: "C#", type:"language"},
-    {id: 6, name: "Python", type:"language"},
-    {id: 7, name: "Bootstrap", type:"api"},
-    {id: 8, name: "JQuery", type:"api"},
-    {id: 9, name: "Mapbox", type:"api"}
-]*/
 
 /**
  * Returns html of single KSA
@@ -35,10 +35,6 @@ function renderKSA(KSA){
     <label class="form-check-label" for="flexCheckDefault">
       ${KSA.name}
     </label>`
-/*    html += `<div class="KSA, ${KSA.type}, btn, btn-primary">`;
-    html += `<input class="form-check-input" id="check-${KSA.name}" value=${KSA}>
-<label for="check-${KSA.name}">${KSA.name}</label></div>`;
-    html += `</div>`;*/
 
     return html;
 }
