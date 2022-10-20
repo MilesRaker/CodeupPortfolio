@@ -157,6 +157,33 @@ function matchingKSAs(project){
     return match;
 }
 
+/**
+ * builds html for each project and updates innerHTML of projects div
+ * @return {void} no return*/
 function renderProjects(){
+    let html = "";
 
+    sortedProjects.forEach(function(project){
+        html += renderProject(project);
+    })
+
+    $(`#project-container`).html(html);
+}
+
+/**
+ * creates proper html for one project
+ * @param {object} project project object
+ * @return {string} html of input object*/
+function renderProject(project){
+    let html = "";
+    html += `
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">${project.name}</h5>
+            <p class="card-text">${project.description}</p>
+            <p class="card-text">Link to: <a href="${project.url}">${project.name}</a></p>
+        </div>
+    </div>`
+
+    return html;
 }
