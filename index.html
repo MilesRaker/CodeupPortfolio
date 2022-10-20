@@ -9,6 +9,8 @@
   <meta name="author" content="Miles Raker">
   <meta name="description" content="portfolio, examples, games">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--FontAwesome-->
+  <script src="https://kit.fontawesome.com/18d6e1a799.js" crossorigin="anonymous"></script>
   <!--Bootstrap 5 Style-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <!--Import index.css-->
@@ -53,9 +55,68 @@
 </nav>
 
 <main>
-  <div id="KSAContainer"></div>
-  <div id="contactContainer"></div>
-  <div id="constructionSidebar"></div>
+  <!--Sticky Buttons-->
+  <div class="sticky-container">
+    <div id="sticky-btns" class="col">
+      <button id="contactBtn" class="btn btn-primary shadow row btn-margin" type="button" data-bs-toggle="collapse" data-bs-target="#contactCard" aria-expanded="false" aria-controls="contactCard">
+        Contact Card
+      </button>
+      <button id="metaBtn" class="btn btn-primary shadow row btn-margin" type="button" data-bs-toggle="collapse" data-bs-target="#metaCard" aria-expanded="false" aria-controls="contactContainer">
+        Build Notes
+      </button>
+    </div>
+  </div>
+
+  <!--Sticky Button Cards-->
+  <div id="contactCard" class="card shadow collapse sideCard ">
+    <div class="card-body">
+      <button type="button" class="btn-close" aria-label="Close" data-bs-toggle="collapse" data-bs-target="#contactCard" aria-expanded="false" aria-controls="contactCard"></button>
+      <h3 class="card-title">Contact</h3>
+      <p class="card-text"><i class="fa-solid fa-phone"></i> 360.606.8381</p>
+      <p class="card-text"><i class="fa-solid fa-envelope"></i> MilesRaker@gmail.com</p>
+      <p class="card-text"><i class="fa-brands fa-linkedin"></i> www.LinkedIn.com/in/MilesRaker/</p>
+      <p class="card-text"><i class="fa-brands fa-react"></i> www.MilesRaker.com</p>
+    </div>
+  </div>
+  <div id="metaCard" class="card shadow collapse sideCard ">
+    <div class="card-body">
+      <button type="button" class="btn-close" aria-label="Close" data-bs-toggle="collapse" data-bs-target="#metaCard" aria-expanded="false" aria-controls="metaCard"></button>
+      <h3>Sticky Buttons</h3>
+      <p>used Bootstrap "collapse" class</p>
+    </div>
+
+  </div>
+
+  <!--Web App Mission Statement-->
+  <div id="purposeCard">
+    <h1>Mission:</h1>
+    <p>Recruiters need to quickly determine if candidates technical knowledge, skills, and abilities fulfill
+    requirements of open positions. This portfolio web app allows potential employers to quickly and intuitively
+    search and view my KSAs. Each KSA is linked to project examples actively using that KSA.</p>
+  </div>
+
+  <!--KSA Search Section-->
+  <div class="container">
+    <h1>Knowledge, Skills, and Abilities:</h1>
+    <div id="KSAContainer" class="container">
+      <div class="row">
+        <div class="col">Languages</div>
+        <div class="col">APIs</div>
+      </div>
+      <div class="row">
+        <div id="KSA-language" class="col"></div>
+        <div id="KSA-API" class="col"></div>
+      </div>
+    </div>
+  </div>
+
+  <!--Sorted Projects Section-->
+  <div class="container" id="project-container">
+
+  </div>
+
+
+
 </main>
 <footer>
 

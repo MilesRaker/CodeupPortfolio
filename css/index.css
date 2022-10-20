@@ -1,0 +1,30 @@
+
+/* Style for sticky buttons */
+
+.sticky-container{
+    position: sticky;
+    top: 60px;
+    float: right;
+    z-index: 100;
+}
+#sticky-btns{
+    display: flex;
+    flex-direction: column;
+}
+.btn-margin{
+    margin: .25em 0 .25em 0;
+}
+
+/* Style for popup cards from sticky buttons */
+.sideCard{
+    position: sticky;
+    top: 60px;
+    z-index: 101;
+    float: right;
+}
+
+.btn-close{
+    display: inline;
+    float: right;
+}
+
