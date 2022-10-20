@@ -6,6 +6,7 @@
 let projects = [
     {id: 0, name: "Welcome.html", KSAs: [{name:"html", type:"language"}], description : "Recreate a webpage in html from an image", url:"html/welcome.html"},
     {id: 1, name: "Github.html", KSAs: [{name:"html", type:"language"}], description : "Recreate Github's teams page layout in a file named github.html", url:"html/github.html"},
+    {id: 2, name: "Forms.html", KSAs: [{name:"html", type:"language"}, {name: "forms", type: "skill"}], description : "Create html form according to specs provided by CodeUp", url:"html/forms.html"},
 
 ]
 let sortedProjects = [];
@@ -48,6 +49,7 @@ function renderKSA(KSA){
 function renderKSAs(){
     let htmlLanguage = "";
     let htmlAPI = "";
+    let htmlSkills ="";
     let KSAsArray = [];
 
     projects.forEach(function(project){
@@ -67,17 +69,20 @@ function renderKSAs(){
             htmlLanguage += renderKSA(KSA);
         } else if(KSA.type === "api"){
             htmlAPI += renderKSA(KSA);
+        } else if(KSA.type === "skill"){
+            htmlSkills += renderKSA(KSA);
         }
     })
 
-    return [htmlLanguage, htmlAPI];
+    return [htmlLanguage, htmlAPI, htmlSkills];
 }
 
 // initial load KSAs
 let renderedHtml = renderKSAs();
 $(`#KSA-language`).html(renderedHtml[0]);
 $(`#KSA-API`).html(renderedHtml[1]);
-
+$(`#KSA-skill`).html(renderedHtml[2]);
+sortProjects();
 
 // Project Search Feature
 /* search schemes:
@@ -102,7 +107,6 @@ $(`.KSA-check`).change(toggleDesiredKSA);
 function toggleDesiredKSA(e){
 
     let KSA = {name: e.target.dataset.name, type: e.target.dataset.type}
-
     if(e.target.checked){
         if(!desiredKSAs.includes(KSA)){
             desiredKSAs.push(KSA);
@@ -129,7 +133,7 @@ function sortProjects(){
      {
         projects.forEach(function (project) {
             // if zero dKSAs, push every project
-            if(desiredKSAs.length !== 0){
+            if(desiredKSAs.length === 0){
                 sortedProjects.push(project);
             }
             // else if the project KSAs includes all desiredKSAs
