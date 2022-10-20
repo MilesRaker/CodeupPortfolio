@@ -4,7 +4,9 @@
 // Eventually migrate to MySQL database, when course gets to MySQL material
 
 let projects = [
-    {id: 0, name: "Welcome.html", KSAs: [{name:"html", type:"language"}], description : "recreate a webpage in html from an image", url:"../html/welcome.html"},
+    {id: 0, name: "Welcome.html", KSAs: [{name:"html", type:"language"}], description : "Recreate a webpage in html from an image", url:"html/welcome.html"},
+    {id: 1, name: "Github.html", KSAs: [{name:"html", type:"language"}], description : "Recreate Github's teams page layout in a file named github.html", url:"html/github.html"},
+
 ]
 let sortedProjects = [];
 // desiredKSAs are chosen by the user, then used to sort projects displayed
@@ -50,7 +52,10 @@ function renderKSAs(){
 
     projects.forEach(function(project){
         project.KSAs.forEach(function(KSA){
-            if(!KSAsArray.includes(KSA)){
+            // .includes only works for primitives
+            // refactor to findIndex(matchingFunction());
+            // findIndex's matching function, if element.name === KSA.name, ect
+            if(KSAsArray.findIndex(function(element){return (element.name === KSA.name) && (element.type === KSA.type)}) < 0){
                 KSAsArray.push(KSA);
             }
         })
@@ -114,13 +119,6 @@ function toggleDesiredKSA(e){
     sortProjects();
 }
 
-function testLogging(){
-    console.log(`desired KSA list:`);
-    desiredKSAs.forEach(function(KSA){
-        console.log(KSA);
-    })
-}
-
 /**
  * updates sortedProjects array
  * call everytime desiredKSAs array changes*/
@@ -135,7 +133,7 @@ function sortProjects(){
                 sortedProjects.push(project);
             }
             // else if the project KSAs includes all desiredKSAs
-            else if(matchingKSAs(project)) {
+            else if(matchingKSAs(project, desiredKSAs)) {
                 sortedProjects.push(project);
             }
         })
@@ -145,11 +143,13 @@ function sortProjects(){
 
 /**
  * helper for sortProjects() if statement
- * @return {boolean} if project KSAs match desiredKSAs*/
-function matchingKSAs(project){
+ * @param {object} project project object
+ * @param {array} KSAList array of KSA objects
+ * @return {boolean} if project KSAs includes all KSAs in KSAList*/
+function matchingKSAs(project, KSAList){
     let match = true;
 
-    desiredKSAs.forEach(function(dKSA){
+    KSAList.forEach(function(dKSA){
         if(project.KSAs.findIndex((element) => element.name === dKSA.name && element.type === dKSA.type) < 0){
             match = false;
         }
