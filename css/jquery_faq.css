@@ -1,0 +1,13 @@
+.invisible {
+    visibility: hidden;
+}
+
+.frame-img {
+    height: 250px;
+    width: 250px;
+    border: black solid 2px;
+}
+
+.highlight {
+    background-color: yellow;
+}

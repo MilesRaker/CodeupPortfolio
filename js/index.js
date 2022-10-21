@@ -29,6 +29,12 @@ let projects = [
     {id: 22, name: "JavaScript Math Object", KSAs: [{name:"javascript", type:"language"}, {name:"Math object", type:"skill"} ], description : "Introduction to JavaScript Math object", url:"html/math-js.html"},
     {id: 23, name: "JavaScript BOM", KSAs: [{name:"javascript", type:"language"}, {name:"BOM", type:"skill"} ], description : "Introduction to JavaScript BOM", url:"html/defuse-the-bom.html"},
     {id: 24, name: "JavaScript DOM", KSAs: [{name:"javascript", type:"language"}, {name:"DOM", type:"skill"} ], description : "Introduction to JavaScript DOM", url:"html/dom-query-js.html"},
+    {id: 25, name: "JQuery Selectors and Events", KSAs: [{name:"javascript", type:"language"}, {name:"JQuery", type:"api"} ], description : "Introduction to JQuery selectors and events", url:"html/jquery_exercises.html"},
+    {id: 26, name: "JQuery FAQ", KSAs: [{name:"javascript", type:"language"}, {name:"JQuery", type:"api"} ], description : "JQuery methods", url:"html/jquery_faq.html"},
+    {id: 27, name: "Ajax Request Introduction", KSAs: [{name:"javascript", type:"language"}, {name:"ajax", type:"api"} ], description : "Introduction to Ajax", url:"html/ajax-store.html"},
+    {id: 28, name: "Ajax Blog", KSAs: [{name:"javascript", type:"language"}, {name:"ajax", type:"api"} ], description : "Load blog posts from external JSON file", url:"html/ajax-blog.html"},
+    {id: 29, name: "Mapbox API with Ajax", KSAs: [{name:"javascript", type:"language"}, {name:"ajax", type:"api"}, {name:"mapbox", type:"api"} ], description : "Use MapboxGL api to complete exercises", url:"html/mapbox_maps_api.html"},
+    {id: 30, name: "Personal Portfolio", KSAs: [{name:"wireframe", type:"skill"}, {name:"css", type:"language"}, {name:"html", type:"language"}, {name:"javascript", type:"language"}, {name:"JQuery", type:"api"}, {name:"bootstrap", type:"api"} ], description : "Create a website that presents work from Codeup to potential employers. You are currently viewing and using this project.", url:"index.html"},
 
 ]
 // desiredKSAs are chosen by the user, then used to sort projects displayed
