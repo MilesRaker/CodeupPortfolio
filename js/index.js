@@ -35,6 +35,7 @@ let projects = [
     {id: 28, name: "Ajax Blog", KSAs: [{name:"javascript", type:"language"}, {name:"ajax", type:"api"} ], description : "Load blog posts from external JSON file", url:"html/ajax-blog.html"},
     {id: 29, name: "Mapbox API with Ajax", KSAs: [{name:"javascript", type:"language"}, {name:"ajax", type:"api"}, {name:"mapbox", type:"api"} ], description : "Use MapboxGL api to complete exercises", url:"html/mapbox_maps_api.html"},
     {id: 30, name: "Personal Portfolio", KSAs: [{name:"wireframe", type:"skill"}, {name:"css", type:"language"}, {name:"html", type:"language"}, {name:"javascript", type:"language"}, {name:"JQuery", type:"api"}, {name:"bootstrap", type:"api"} ], description : "Create a website that presents work from Codeup to potential employers. You are currently viewing and using this project.", url:"index.html"},
+    {id: 30, name: "Weather Map", KSAs: [{name:"responsive", type:"skill"}, {name:"openweather", type:"api"}, {name:"css", type:"language"}, {name:"html", type:"language"}, {name:"javascript", type:"language"}, {name:"JQuery", type:"api"}, {name:"bootstrap", type:"api"}, {name:"mapbox", type:"api"}], description : "Design a responsive weather application using Mapbox and OpenWeather APIs.", url:"html/weather_map.html"},
 
 ]
 // desiredKSAs are chosen by the user, then used to sort projects displayed
@@ -204,3 +205,4 @@ function renderProject(project){
 
     return html;
 }
+

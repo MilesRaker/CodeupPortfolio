@@ -1,0 +1,50 @@
+html, body{
+    height: 100%;
+    margin: 0;
+}
+/*main is the backdrop for and contains first-impression
+changing the height of main will adjust the vertical position of first-impression
+*/
+main {
+    display: flex;
+    flex-flow: column;
+    height: 75%;
+    background-image: url("../img/portfolioBackground.png");
+    background-size: cover;
+}
+#first-impression{
+    padding: 2em;
+    background-image: url("../img/portfolioBackground.png");
+    background-size: cover;
+    border-radius: 1em;
+    color: whitesmoke;
+}
+
+@keyframes borderGlow{
+    0%{box-shadow: #0F0F0F;  }
+    50%{box-shadow: whitesmoke;}
+    100%{box-shadow: #0F0F0F;}
+}
+.glowing-border{
+    outline: none;
+    box-shadow: 5px;
+    animation-name: borderGlow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@media (min-width: 576px){
+
+}
+
+@media (min-width: 768px){
+
+}
+
+@media (min-width: 992px){
+
+}
+
+@media (min-width: 1200px){
+
+}

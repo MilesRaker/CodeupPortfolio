@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map</title>
+    <!-- Responsive Viewport Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Local Styles -->
+    <link rel="stylesheet" href="../css/weather_map.css">
+    <!-- MapboxGL -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <nav class="navbar navbar-expand-lg shadow bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Miles' Responsive Weather Map</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Collapsable Navbar Content -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Other page</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <br>
+        <!-- Controls Section -->
+        <div id="controls" class="container mb-2 d-flex flex-row justify-content-around justify-content-md-start">
+            <button id="markerTypeToggle" class="btn btn-primary mx-1">Drop Pin</button>
+            <button id="fiveDayLocalForecast" class="btn btn-primary mx-1">Five Day Forecast</button>
+        </div>
+
+
+        <!-- Address Input Form -->
+        <form id="inputAddressForm" class="form">
+            <div id="toggleInput" class="d-flex justify-content-center justify-content-md-start">
+                <label for="inputAddress"> Search:
+                    <input id="inputAddress" type="text" placeholder="Enter Address...">
+                </label>
+                <button type="submit" id="inputAddressSubmit">Search</button>
+            </div>
+        </form>
+        <hr>
+        <!-- Weather Display Section -->
+        <div id="weatherDisplayTitle" class="d-flex flex-column container">
+            <h3>Location: </h3>
+            <p></p> <!-- innerHTML is loaded from js-->
+        </div>
+        <div class="container mx-auto">
+            <div id="weatherDisplay" class="row">
+                <!-- innerHTML is loaded from js -->
+            </div>
+        </div>
+
+        <!-- Div holds Mapbox -->
+        <div id='map' class="mx-auto"></div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+    <!-- Mapbox GL -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <script src="../js/mapbox-geocoder-utils.js"></script>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <!-- Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- Local JavaScript -->
+    <script src="../js/keys.js"></script>
+    <script src="../js/weather_map.js"></script>
+</body>
+</html>

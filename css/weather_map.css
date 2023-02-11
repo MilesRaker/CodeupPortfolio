@@ -1,0 +1,35 @@
+:root{
+
+}
+
+*{
+
+}
+
+#map{
+    width: 90%;
+    height: 300px;
+    border: #848487 solid 5px;
+    border-radius: 1em;
+}
+
+#initialWeatherData{
+    display: inline-flex;
+}
+
+#initialWeatherData>*{
+    margin: .5em;
+}
+
+#weatherDisplayTitle{
+    display: inline-flex;
+}
+
+#initialWeatherData>div{
+    width: 100%;
+}
+
+.weatherIcon{
+    max-height: 100px;
+    max-width: 100px;
+}
